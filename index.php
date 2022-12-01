@@ -11,12 +11,17 @@
     .table {
         background-color: grey;
     }
+   .table{
+    border: 1px solid black
+   }
    
 </style>
 <body>
-    <h1>Labas</h1>
+    <h1>Coins</h1>
 
 <?php include "./Coin.php";
+
+
 $DesimtLitu = new Coin();
 // print_r($DesimtLitu);
 
@@ -72,7 +77,7 @@ $PenkCentu->setVerte = (100);
 $PenkCentu->setMetai = (1925);
 $PenkCentu->setMedziaga = ('Sidarbas');
 
-print_r($monetos);
+// print_r($monetos);
 
 ?>
 
@@ -125,6 +130,61 @@ print_r($monetos);
   </tbody>
 </table>
 
+<?php include "./Phone.php";
+
+
+$phone = new Phone ('Samsung', 2020, 'S6', 'Naujas');
+// print_r ($phone);
+$phone1 = new Phone ('Iphone', 2020, 'X', 'Dėvėtas');
+// print_r ($phone1);
+$phone2 = new Phone ('Huawei', 2020, 'P Smart', 'Naujas');
+// print_r ($phone2);
+$phone3 = new Phone ('Iphone', 2020, 'XR', 'Dėvėtas');
+// print_r ($phone3);
+
+?>
+<h1>Phones</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Gamintojas</th>
+      <th scope="col">Metai</th>
+      <th scope="col">Modelis </th>
+      <th scope="col">Būklė</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row"><?php echo $phone->maker;?> </td>
+      <td><?php echo $phone->year;?></td>
+      <td><?php echo $phone->model;?></td>
+      <td><?php echo $phone->condition;?></td>
+      
+      
+    </tr>
+    <tr>
+      <td scope="row"><?php echo $phone1->maker;?></td>
+      <td><?php echo $phone1->year;?></td>
+      <td><?php echo $phone1->model;?></td>
+      <td><?php echo $phone1->condition;?></td>
+
+    </tr>
+    <tr>
+      <td scope="row"><?php echo $phone2->maker;?></td>
+      <td><?php echo $phone2->year;?></td>
+      <td><?php echo $phone2->model;?></td>
+      <td><?php echo $phone2->condition;?></td>
+     
+    </tr>
+    <td scope="row"><?php echo $phone3->maker;?></td>
+      <td><?php echo $phone3->year;?></td>
+      <td><?php echo $phone3->model;?></td>
+      <td><?php echo $phone3->condition;?></td>
+     
+
+  </tbody>
+
+</table>
 </body>
 </html>
 
